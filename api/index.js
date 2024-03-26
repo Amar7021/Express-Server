@@ -1,7 +1,7 @@
-const connectToDB = require("./db/connect.js")
-const express = require("express")
-const cors = require("cors")
-const dotenv = require("dotenv")
+import connectToDB from "./db/connect.js"
+import express from "express"
+import cors from "cors"
+import dotenv from "dotenv"
 
 dotenv.config({ path: "./.env" })
 
@@ -40,7 +40,5 @@ app.use("/", (_, res) => {
 })
 
 app.use("/user", (_, res) => {
-  res.send({ Message: "Welcome to Express World!" })
+  res.send({ Message: "Welcome user!!" })
 })
-
-// module.exports = app
